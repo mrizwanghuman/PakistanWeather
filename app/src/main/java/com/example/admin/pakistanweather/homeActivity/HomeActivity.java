@@ -133,6 +133,7 @@ getlocation();
                 Bundle bundle = new Bundle();
                 bundle.putString("latlog", stringLatLog);
                 todayForeCastFragment = TodayForeCastFragment.newInstance(stringLatLog);
+                Log.d(TAG, "onSuccess: learing git");
 //
             }
         }).addOnFailureListener(new OnFailureListener() {
