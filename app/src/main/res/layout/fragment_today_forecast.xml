@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/order_image"
+    tools:context="com.example.admin.pakistanweather.fragments.TodayForeCastFragment">
+<LinearLayout
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/minar_e_pakistan"
+    android:layout_height="match_parent">
+    <TextView
+
+        android:id="@+id/tvDisplayCity"
+        style="@style/TextHeadingW42"
+      android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/tvCurTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tvCur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+</LinearLayout>
