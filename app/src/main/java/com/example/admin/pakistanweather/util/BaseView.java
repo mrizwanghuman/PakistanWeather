@@ -5,5 +5,5 @@ package com.example.admin.pakistanweather.util;
  */
 
 public interface BaseView {
-    void showError();
+    void showError(String e);
 }

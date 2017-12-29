@@ -5,6 +5,6 @@ package com.example.admin.pakistanweather.util;
  */
 
 public interface BasePresenter<V extends BaseView> {
-    void onAttachView();
+    void onAttachView(V view);
     void onDetachView();
 }

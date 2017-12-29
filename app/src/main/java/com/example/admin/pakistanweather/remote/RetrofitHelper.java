@@ -3,9 +3,14 @@ package com.example.admin.pakistanweather.remote;
 import com.example.admin.pakistanweather.model.currentlocationdata.UserLocList;
 import com.example.admin.pakistanweather.model.currentweatherdata.CurrentWeather;
 import com.example.admin.pakistanweather.model.currentweatherdata.Response;
+import com.example.admin.pakistanweather.model.hourforecast.HourlyForecastData;
+import com.example.admin.pakistanweather.model.tendaysforecast.TenDaysForecastData;
 import com.example.admin.pakistanweather.remote.RemoteService;
 
+import java.io.File;
+
 import io.reactivex.Observable;
+import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -23,9 +28,8 @@ public class RetrofitHelper {
     private static OkHttpClient httpClientConfig(HttpLoggingInterceptor interceptor){
         return new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
-
-
     }
+
     private static HttpLoggingInterceptor loggingInterceptor(){
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -52,7 +56,7 @@ public class RetrofitHelper {
 
     //Current Forecast
 
-    public static Retrofit createCurrentForecast(){
+    public static Retrofit weatherRetrofit(){
         Retrofit retrofit= new Retrofit.Builder()
                 .baseUrl(BASE_URL_CUR_WEATHER)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -64,9 +68,22 @@ public class RetrofitHelper {
 
     }
     public  static Observable<CurrentWeather> getCurrentForecast(String apiKey, String state, String city){
-        Retrofit retrofit = createCurrentForecast();
+        Retrofit retrofit = weatherRetrofit();
         RemoteService remoteService = retrofit.create(RemoteService.class);
         return remoteService.getCurrentWeather(apiKey, state, city);
     }
 
+    public  static Observable<HourlyForecastData> getHourForecastData(String apiKey, String state, String city){
+        Retrofit retrofit = weatherRetrofit();
+        RemoteService remoteService = retrofit.create(RemoteService.class);
+        return  remoteService.getHourlyForecast(apiKey, state, city);
+
+    }
+
+    public  static Observable<TenDaysForecastData> getTenDayForecast(String apiKey, String state, String city){
+        Retrofit retrofit = weatherRetrofit();
+        RemoteService remoteService = retrofit.create(RemoteService.class);
+        return  remoteService.getTenDaysForeCast(apiKey, state, city);
+
+    }
 }

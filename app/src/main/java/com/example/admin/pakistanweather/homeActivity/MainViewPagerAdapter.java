@@ -4,9 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.admin.pakistanweather.fragments.TenDaysFrag;
-import com.example.admin.pakistanweather.fragments.TomorrowHourlyFrag;
-import com.example.admin.pakistanweather.fragments.TodayForeCastFragment;
+import com.example.admin.pakistanweather.fragments.hourlyforecast.HourlyForecastFrag;
+import com.example.admin.pakistanweather.fragments.tendaysforecast.TenDaysFrag;
+import com.example.admin.pakistanweather.fragments.currentforecast.CurrentForeCastFragment;
 
 /**
  * Created by  Admin on 12/15/2017.
@@ -21,11 +21,11 @@ public class MainViewPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                TodayForeCastFragment todayHourlyFragment = new TodayForeCastFragment();
+                CurrentForeCastFragment todayHourlyFragment = new CurrentForeCastFragment();
                 return todayHourlyFragment;
 
             case 1:
-                TomorrowHourlyFrag tomorrowHourlyFrag = new TomorrowHourlyFrag();
+                HourlyForecastFrag tomorrowHourlyFrag = new HourlyForecastFrag();
                 return tomorrowHourlyFrag;
             case 2:
                 TenDaysFrag tenDaysFrag = new TenDaysFrag();
