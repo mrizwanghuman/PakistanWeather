@@ -7,4 +7,5 @@
     <string name="app_title">Pakistan Weather</string>
 
     <string name="minar_e_pakistan">Minar-e-Pakistan</string>
+    <string name="precipitation">Precipitation</string>
 </resources>

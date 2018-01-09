@@ -2,12 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.admin.pakistanweather.fragments.TenDaysFrag">
+    tools:context="com.example.admin.pakistanweather.fragments.tendaysforecast.TenDaysFrag">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment" />
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/rcTenDaysForecast"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
 
 </FrameLayout>
