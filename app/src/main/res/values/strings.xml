@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PakistanWeather</string>
+    <string name="app_name">Pakistan Weather</string>
     <string name="app_settings">Settings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -7,5 +7,7 @@
     <string name="app_title">Pakistan Weather</string>
 
     <string name="minar_e_pakistan">Minar-e-Pakistan</string>
-    <string name="precipitation">Precipitation</string>
+    <string name="precipitation">Precip</string>
+    <string name="hourly_forecast">Hourly Forecast</string>
+    <string name="latitude">latitude</string>
 </resources>

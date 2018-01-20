@@ -2,5 +2,7 @@
 <resources>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="pakGreen">#26A65B</color>
+    <color name="redAlpha">#80000000</color>
+    <color name="blueAlpha">#b3c3e6fc</color>
 
 </resources>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.admin.pakistanweather.homeActivity.HomeActivity">
+    tools:context="com.riz.admin.pakistanweathernew.homeActivity.HomeActivity">
 
     <android.support.design.widget.AppBarLayout
         android:background="@color/pakGreen"
