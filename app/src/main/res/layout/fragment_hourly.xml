@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.riz.admin.pakistanweathernew.fragments.hourlyforecast.HourlyForecastFrag">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:orientation="vertical"
+      android:layout_height="wrap_content">
+
+      <TextView
+          style="@style/rizWhiteStyle"
+          android:id="@+id/tvCurrentCity"
+          android:layout_width="match_parent"
+          android:gravity="center"
+          android:layout_height="wrap_content"
+          android:textColor="@android:color/black"
+
+          />
+
+      <TextView
+
+          style="@style/rizWhiteSmallSize"
+          android:textColor="@android:color/black"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/hourly_forecast"/>
+
+  </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcHourlyForeCast"
+        android:background="@drawable/minar_e_pakistan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
